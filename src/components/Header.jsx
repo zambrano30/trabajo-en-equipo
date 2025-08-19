@@ -6,23 +6,15 @@ export default function Header() {
   return (
     <header className="w-full bg-white fixed top-0 left-0 z-20 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-
-        
         <nav className="hidden md:flex space-x-6">
           <a href="#home" className="text-black hover:text-gray-700 transition">Inicio</a>
           <a href="#menu" className="text-black hover:text-gray-700 transition">Menu</a>
         </nav>
-
-       
         <h1 className="text-2xl lg:text-4xl font-bold text-oasis-orange mx-4 ">Restaurante Oasis</h1>
-
-       
         <nav className="hidden md:flex space-x-6">
           <a href="#about" className="text-black hover:text-gray-700 transition">Sobre</a>
           <a href="#contact" className="text-black hover:text-gray-700 transition">Contacto</a>
         </nav>
-
-       
         <button
           className="md:hidden text-black focus:outline-none"
           onClick={() => setAbierto(!abierto)}
@@ -36,8 +28,6 @@ export default function Header() {
           </svg>
         </button>
       </div>
-
-    
       {abierto && (
         <nav className="md:hidden bg-white px-6 py-4 space-y-4 absolute top-full left-0 w-full shadow-md z-30">
           <a href="#home" className="block text-black hover:text-gray-700 transition">Inicio</a>
