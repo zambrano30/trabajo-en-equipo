@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+
+
+@theme {
+  --color-oasis-yellow: #F4C430;
+  --color-oasis-orange: #D35400;
+  --color-oasis-green: #2ECC71;
+  --color-oasis-brown: #6E3B1B;
+  --color-oasis-light: #F8F5F0;
+  --color-oasis-dark: #1C1C1C;
+}
+
+

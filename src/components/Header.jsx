@@ -14,7 +14,7 @@ export default function Header() {
         </nav>
 
        
-        <div className="text-2xl font-bold text-black mx-4">Restaurante Oasis</div>
+        <h1 className="text-2xl lg:text-4xl font-bold text-oasis-orange mx-4 ">Restaurante Oasis</h1>
 
        
         <nav className="hidden md:flex space-x-6">
