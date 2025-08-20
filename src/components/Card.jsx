@@ -1,9 +1,8 @@
-
 const Card = ({ meal }) => {
   return (
     <div className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition">
       <img
-        src={`${meal.strMealThumb}/medium`} // 👈 podés cambiar a /small o /large
+        src={`${meal.strMealThumb}/small/medium/large`}
         alt={meal.strMeal}
         className="w-full h-48 object-cover"
       />
