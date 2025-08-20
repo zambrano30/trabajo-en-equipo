@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { Routes, Route, Link} from "react-router";
+import Sobre from "../pages/SobreNosotro";
 
 export  function Header() {
   const [abierto, setAbierto] = useState(false);
+
 
   return (
     <header className="w-full bg-white fixed top-0 left-0 z-20 shadow-md">
@@ -9,8 +12,8 @@ export  function Header() {
 
         
         <nav className="hidden md:flex space-x-6">
-          <a href="#home" className="text-black hover:text-gray-700 transition">Inicio</a>
-          <a href="#menu" className="text-black hover:text-gray-700 transition">Menu</a>
+          <Link to="/" className="text-black hover:text-gray-700 transition">Inicio</Link>
+          <Link to="menu" className="text-black hover:text-gray-700 transition">Menu</Link>
         </nav>
 
        
@@ -18,8 +21,8 @@ export  function Header() {
 
        
         <nav className="hidden md:flex space-x-6">
-          <a href="#about" className="text-black hover:text-gray-700 transition">Sobre</a>
-          <a href="#contact" className="text-black hover:text-gray-700 transition">Contacto</a>
+          <Link to="/Sobre" className="text-black hover:text-gray-700 transition">Sobre</Link>
+          <Link to="/Contacto" className="text-black hover:text-gray-700 transition">Contacto</Link>
         </nav>
 
        
@@ -37,6 +40,13 @@ export  function Header() {
         </button>
       </div>
 
+        
+<Routes>
+        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/menu" element={<h1>Login</h1>} />
+        <Route path="/sobre" element={<Sobre/>} /> 
+        <Route path="/Contacto" element={<h1>Servicios</h1>} />
+      </Routes>
     
       {abierto && (
         <nav className="md:hidden bg-white px-6 py-4 space-y-4 absolute top-full left-0 w-full shadow-md z-30">
@@ -47,5 +57,8 @@ export  function Header() {
         </nav>
       )}
     </header>
+
+        /*Archivo page*/
   );
 }
+
