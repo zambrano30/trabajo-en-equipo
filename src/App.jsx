@@ -24,6 +24,19 @@ function App() {
           
         </div>
       </section>
+
+      <div className="bg-white hidden lg:block relative -mt-40 mx-auto max-w-4xl w-[90%] p-8 rounded-2xl shadow">
+  <h2 className="text-center text-2xl md:text-4xl font-bold uppercase">
+    Restaurantes de alta cocina con muchos estilos
+  </h2>
+
+  <div className="mt-6 text-center max-w-2xl mx-auto">
+    <p>
+       El mejor restaurante donde ofrecemos comidas  de todo tipo y variedad  de paises animate aprobar una nueva cultura
+    </p>
+  </div>
+</div>
+
     </>
     
   );
