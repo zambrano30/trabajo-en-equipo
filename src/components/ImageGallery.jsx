@@ -23,9 +23,11 @@ const ImageGallery = () => {
     fetchMeals();
   }, []);
 
-  const totalPages = Math.ceil(meals.length / imagesPerPage);
+  // Filtrar el id excluido antes de paginar
+  const filteredMeals = meals.filter((meal) => meal.idMeal !== "53088" && meal.idMeal !== 53088);
+  const totalPages = Math.ceil(filteredMeals.length / imagesPerPage);
 
-  const currentMeals = meals.slice(
+  const currentMeals = filteredMeals.slice(
     page * imagesPerPage,
     page * imagesPerPage + imagesPerPage
   );
