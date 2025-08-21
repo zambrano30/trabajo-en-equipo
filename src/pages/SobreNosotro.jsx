@@ -5,10 +5,15 @@ export default function Sobre(){
 
 
         <>
-        <h1>carlos</h1>
+         <div className="w-full h-screen flex justify-center items-center">
+
+             <div>
+                <div>a</div>
+                <div>a</div>
+                <div>a</div>
+            </div>
+          </div> 
         </>
     )
 
-
-    
 }
