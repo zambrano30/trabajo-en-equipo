@@ -10,22 +10,18 @@ export  function Header() {
     <header className="w-full bg-white fixed top-0 left-0 z-20 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-        
         <nav className="hidden md:flex space-x-6">
           <Link to="/" className="text-black hover:text-gray-700 transition">Inicio</Link>
           <Link to="menu" className="text-black hover:text-gray-700 transition">Menu</Link>
         </nav>
 
-       
         <div className="text-2xl font-bold text-black mx-4">Oasis</div>
 
-       
         <nav className="hidden md:flex space-x-6">
           <Link to="/Sobre" className="text-black hover:text-gray-700 transition">Sobre</Link>
           <Link to="/Contacto" className="text-black hover:text-gray-700 transition">Contacto</Link>
         </nav>
 
-       
         <button
           className="md:hidden text-black focus:outline-none"
           onClick={() => setAbierto(!abierto)}
@@ -58,7 +54,6 @@ export  function Header() {
       )}
     </header>
 
-        /*Archivo page*/
   );
 }
 
