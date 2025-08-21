@@ -2,7 +2,8 @@
 
 
 
-@theme {
+
+:root {
   --color-oasis-yellow: #F4C430;
   --color-oasis-orange: #D35400;
   --color-oasis-green: #2ECC71;
@@ -10,5 +11,12 @@
   --color-oasis-light: #F8F5F0;
   --color-oasis-dark: #1C1C1C;
 }
+
+.text-oasis-yellow { color: var(--color-oasis-yellow); }
+.text-oasis-orange { color: var(--color-oasis-orange); }
+.text-oasis-green { color: var(--color-oasis-green); }
+.text-oasis-brown { color: var(--color-oasis-brown); }
+.text-oasis-light { color: var(--color-oasis-light); }
+.text-oasis-dark { color: var(--color-oasis-dark); }
 
 
