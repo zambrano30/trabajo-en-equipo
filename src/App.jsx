@@ -2,6 +2,7 @@ import ImageGallery from "./components/ImageGallery";
 import { Routes, Route } from "react-router";
 import MainLayout from "./layouts/MainLayout";
 import Sobre from "./pages/SobreNosotro";
+import Ingredientes from "./pages/Ingredientes";
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
             </>
           }
         />
-        <Route path="/menu" element={<h1>Login</h1>} />
+        <Route path="/ingredientes" element={<Ingredientes/>} />
         <Route path="/sobre" element={<Sobre/>} />
         <Route path="/contacto" element={<h1>Servicios</h1>} />
       </Route>
