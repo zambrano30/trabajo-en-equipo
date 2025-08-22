@@ -34,7 +34,7 @@ function App() {
                 <div className="mt-6 text-center max-w-2xl mx-auto">
                   <p>
                     El mejor restaurante donde ofrecemos comidas de todo tipo y
-                    variedad de países, ¡anímate a probar una nueva cultura!
+                    variedad de países, ¡anímate a probar una nueva cultura!.
                   </p>
                 </div>
               </div>
