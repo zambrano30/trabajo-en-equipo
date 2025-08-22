@@ -47,4 +47,4 @@ function App() {
 
 export default App;
 
-/* npm install lucide-react */
+/* npm install lucide-react  esto es lo que debo instalar*/
