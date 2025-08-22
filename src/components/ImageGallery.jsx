@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
+import CountrySearchBar from "./CountrySearchBar";
 
 const ImageGallery = () => {
   const [meals, setMeals] = useState([]);
   const [page, setPage] = useState(0);
+  const [selectedCountry, setSelectedCountry] = useState("");
   const imagesPerPage = 6;
 
   useEffect(() => {
@@ -19,14 +21,16 @@ const ImageGallery = () => {
         console.error("Error al cargar los datos:", error);
       }
     };
-
     fetchMeals();
   }, []);
 
-  // Filtrar el id excluido antes de paginar
-  const filteredMeals = meals.filter((meal) => meal.idMeal !== "53088" && meal.idMeal !== 53088);
+  
+  const filteredMeals = meals.filter(
+    (meal) =>
+      meal.idMeal !== "53088" && meal.idMeal !== 53088 &&
+      (selectedCountry === "" || meal.strArea?.toLowerCase() === selectedCountry.toLowerCase())
+  );
   const totalPages = Math.ceil(filteredMeals.length / imagesPerPage);
-
   const currentMeals = filteredMeals.slice(
     page * imagesPerPage,
     page * imagesPerPage + imagesPerPage
@@ -42,7 +46,7 @@ const ImageGallery = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold text-center mb-6"></h2>
+      <CountrySearchBar onCountrySelect={setSelectedCountry} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {currentMeals.map((meal) => (
           <Card key={meal.idMeal} meal={meal} />

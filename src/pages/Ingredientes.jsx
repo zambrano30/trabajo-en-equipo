@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export default function Ingredientes() {
   const [meals, setMeals] = useState([]);
+  const [searchIngredient, setSearchIngredient] = useState("");
 
   useEffect(() => {
     const fetchMeals = async () => {
@@ -36,15 +37,30 @@ export default function Ingredientes() {
         console.error("Error al cargar los datos:", error);
       }
     };
-
     fetchMeals();
   }, []);
+
+  // Filtrar comidas por ingrediente escrito
+  const filteredMeals = meals.filter((meal) => {
+    if (!searchIngredient) return true;
+    const ingredients = [1,2,3,4,5].map(i => (meal[`strIngredient${i}`] || "").toLowerCase());
+    return ingredients.some(ing => ing.includes(searchIngredient.toLowerCase()));
+  });
 
   return (
     <div className="w-full min-h-screen bg-gray-100 p-6">
       <h1 className="text-3xl font-bold text-center mb-10">Recetas de Pollo</h1>
+      <div className="max-w-md mx-auto mb-8">
+        <input
+          type="text"
+          value={searchIngredient}
+          onChange={e => setSearchIngredient(e.target.value)}
+          placeholder="Buscar por ingrediente..."
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 bg-white shadow-sm"
+        />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-        {meals.map((meal) => (
+        {filteredMeals.map((meal) => (
           <div
             key={meal.idMeal}
             className="w-80 bg-white shadow-md rounded-xl overflow-hidden"

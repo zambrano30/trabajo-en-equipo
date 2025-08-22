@@ -14,7 +14,7 @@ const Card = ({ meal }) => {
         <p className="text-gray-700 text-sm md:text-base lg:text-lg xl:text-xl line-clamp-3 font-light flex-1">
           {meal.strArea}
         </p>
-        {/* Icono de YouTube y enlace al video */}
+      
         {meal.strYoutube && (
           <a
             href={meal.strYoutube}
