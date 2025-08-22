@@ -40,7 +40,7 @@ const ImageGallery = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold text-center mb-6">Galería Aleatoria 🍲</h2>
+      <h2 className="text-2xl font-bold text-center mb-6"></h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {currentMeals.map((meal) => (
           <Card key={meal.idMeal} meal={meal} />
