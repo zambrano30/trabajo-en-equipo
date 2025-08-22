@@ -1,6 +1,7 @@
 
 import {Header  } from "./components/Header";
 import ImageGallery  from "./components/ImageGallery";
+import CountrySearchBar from "./components/CountrySearchBar";
 function App() {
  
   return (
@@ -38,9 +39,12 @@ function App() {
   </div>
 </div>
 <ImageGallery/>
+<CountrySearchBar/>
     </>
     
   );
 }
 
 export default App;
+
+/* npm install lucide-react */

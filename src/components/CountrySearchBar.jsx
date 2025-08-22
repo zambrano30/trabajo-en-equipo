@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, ChevronDown } from 'lucide-react';
-import { useCountries } from '../../../hooks/useCountries';
+import { useCountries } from './useCountries';
 
 const CountrySearchBar = ({ onCountrySelect, placeholder = "Buscar restaurantes, ciudades..." }) => {
   const [searchTerm, setSearchTerm] = useState('');

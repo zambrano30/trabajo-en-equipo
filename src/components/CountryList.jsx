@@ -1,4 +1,4 @@
-import { useCountries } from '../../hooks/useCountries';
+import { useCountries } from './useCountries';
 
 const CountryList = () => {
   const { countries, loading } = useCountries();
